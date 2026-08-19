@@ -1,0 +1,14 @@
+# Introduction
+
+ABMI collects data on thousands of species and evaluates how their relative occurrence or abundance varies among natural and human-created habitats. The raw data and model results are made available for public use on the [ABMI website](https://abmi.ca/abmi-home). This manual describes the content, methodology, limitations, and caveats associated with our species distribution models. 
+
+The results of this work are currently accessible in four places:
+
+
+* [**ABMI Biodiversity Browser:**](https://abmi.ca/biobrowser) The ABMI Biodiversity Browser is maintained by the ABMI Information Centre. The Biodiversity Browser presents information on species occurrence records and distribution models. 
+* [**ABMI Data:**](https://abmi.ca/abmi-home/data-resources/data-portal-main/data-portal.html?rootPath=/open-data-portal&itemPerPage=6) The ABMI website is maintained by the ABMI Information Centre. Raw species records and derived data products are available for download.
+* [**Online Reporting for Biodiversity Tool (ORB):**](https://orb.abmi.ca/areas) The ABMI ORB tool is maintained by the ABMI Information Centre and summarizes both species and habitat indicators for a suite of focal regions. This allows users to understand the current state of biodiversity and their habitats in an accessible format.
+* [**ABMIexploreR**](https://abbiodiversity.github.io/ABMIexploreR/) This GitHub repository is maintained by the ABMI Science Centre and contains data files and scripts that allow users to use the ABMI species models to make predictions for their own research and application purposes. 
+
+
+*Note: In general, the ABMI tries to update all four sources of information at the same time. However, as the models are updated before information products are created for the Biodiversity Browser or Online Reporting for Biodiversity Tool, there may be a delay between sources. See the `ABMIexploreR` package for the most up-to-date models.*

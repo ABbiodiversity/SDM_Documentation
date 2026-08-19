@@ -1,0 +1,15 @@
+# Richness
+
+We derived a composite richness index that is the average richness index for each 1 km^2^ grid cell within a taxonomic group.
+
+## Methods 
+
+Species richness for each taxon was modeled by stacking predictions from individual species habitat association models. Individual species models were built by relating the species’ occurrence data to four sets of environmental variables: landcover types (vegetation or soil), human footprint, bioclimatic, and geographic location. Using these relationships, the mean occurrence probability of each species was projected for each 1 km^2^ grid cell in the province. The species richness index for each taxon was produced by summing these predicted probabilities and scaling the values to range between 0 and 1 by dividing each 1 km^2^ grid cell value by maximum value over all grid cells. For birds, these predicted relative abundance were rescaled to probability as $1 - \exp(-\text{abundance})$ and scaling the values to range between 0 and 1 by dividing each 1 km^2^ grid cell value by maximum value over all grid cells.  
+
+## Limitations 
+
+The index of richness does not adjust for multiple habitat types occurring within each 1 km^2^ grid cell. For each species, the probability of occurrence was modeled for each habitat type, and an area-weighted average across habitat types determined for each 1 km^2^ grid cell. By summing across species, an index of richness was determined. This estimate is the average of point richness throughout each 1 km^2^ grid cell, and did not incorporate the fact that most 1 km^2^ grid cells span multiple habitat types and thus have higher richness than any single type alone, or having higher richness due to edge effects. However, a 1 km^2^ grid cell dominated by habitats having relatively high richness will have a higher index than a 1 km^2^ grid cell dominated by habitats with low richness.
+
+Rare species were not included when determining the index of richness. The ABMI only models species habitat associations for species that have sufficient data to create robust models. Since the index of richness was created from the species models, the index only includes species with more than the minimum number of detections. It is possible that some habitat types may have a disproportionate number of rare species (e.g., possibly some wetland types) and our index of richness that does not incorporate rare species does not capture this. 
+
+There are spatial irregularities in sampling intensity that influence the richness index. In regions with higher intensity of ABMI surveys, more species will have reached the minimum number of detections required for modeling, and thus more species will have been included in the index of richness. ABMI sampling intensity has been relatively low in the Rocky Mountain natural region, and in northwestern Alberta. Thus, species that are most commonly found in these regions will be less likely to have been included in the index of richness and 1 km^2^ grid cells in these regions may have artificially low indices of richness.

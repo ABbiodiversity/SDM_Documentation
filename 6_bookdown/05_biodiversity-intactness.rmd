@@ -1,0 +1,32 @@
+# Biodiversity Intactness Index
+
+The ABMI Biodiversity Intactness Index (BII) is a measure of the direct impact of human footprint on affected species’ abundances. Intactness is calculated at the species level, though most often reported for a group of species or entire taxon. Intactness decreases where footprint drives species abundances either up or down, as these are both abundance deviations due to anthropogenic disturbance, though the formula for calculation differs slightly in each of these circumstances.
+
+## Methods 
+
+To calculate intactness, we first use habitat models to estimate each species’ relative abundance, both in the current observed landbase and in a reference landbase in which human footprint has been removed and back-filled with the vegetation (or soil) that was there prior to the footprint. If the species is predicted to be less abundant in the current landbase than in the reference, intactness is defined as follows:
+
+$$BII =  \frac{Current}{Reference} * 100%$$
+In a decreasing abundance scenario, an intactness of 80%, for example, would mean that the species is currently at 80% of the abundance expected in the reference landbase with no footprint. 
+
+If the species is predicted to be more abundant in the current landbase, intactness is calculated as follows:
+
+$$BII =  \frac{Reference}{Current} * 100%$$
+
+In an increasing abundance scenario, an intactness of 80%, for example, would mean that the species is currently $1.25\times$ as abundant as expected in the reference landbase ($1/1.25 \times 100\% = 80\%$). 
+
+Again, intactness declines as the current abundance differs from the reference abundance, regardless of whether the species is predicted to be less or more abundant in the current landscape. 
+
+Intactness of a taxon, such as vascular plants, is simply the average of the individual intactnesses of all species within the taxonomic group. Overall biodiversity intactness is the average of the individual average intactnesses for all of the 7 taxa: birds, mammals, amphibians, soil mites, vascular plants, bryophytes and lichens. Because any difference between current and reference, positive or negative, lowers the intactness of a species, those species that increase in abundance with human footprint do not cancel out species that decrease in abundance with footprint when calculating taxa-level or overall biodiversity intactness. 
+
+It is important to note that overall intactness is not the average of all intactnesses for all species across all taxa. This is because there are large differences in the number of species within each taxa and therefore, if averages were calculated simply across all species, the overall biodiversity intactness would be driven almost entirely by vascular plants (i.e., the taxa containing by far the most species).
+
+To map intactness, we calculate the intactness in each 1 km^2^ cell covering the province. To summarize intactness for particular regions, we we calculate each species’ current and reference abundance by summing the 1 km^2^ cell values in the region, then calculate intactness for the species from those totals. Species intactness values are then averaged to give the intactness of the taxon for the region and the taxa averages are then averaged for overall biodiversity intactness. 
+
+When calculating intactness for a given region, we use the total current and reference population in that given reporting region. Some human footprint types can have positive effects on a species in a region while other types can have negative effects. These offsetting effects would keep intactness relatively high for that species, even though each footprint type has an effect. In this sense, when calculated for a reporting region, intactness is more representative of regional cumulative effects rather than the sum of local effects.
+
+## Limitations 
+
+Because intactness is based on the models for each species, it incorporates all the assumptions and limitations of those models. However, intactness is an average across many species, downweighting the overall impact of potential errors in individual species’ models. 
+
+The main limitation is that intactness is largely a function of human footprint. Maps of intactness are therefore highly correlated with maps of human footprint, regardless of the taxon. Intactness maps differ from human footprint maps only because some footprint types have greater or lesser effects on species in a taxon. Intactness does not measure how much species abundances have changed over time because many factors in addition to habitat change due to human footprint (i.e., not considered in the intactness calculation) will drive changes in species’ populations.

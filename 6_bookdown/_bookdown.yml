@@ -1,0 +1,3 @@
+book_filename: "SDM_Documentation"
+delete_merged_file: true
+output_dir: "docs"

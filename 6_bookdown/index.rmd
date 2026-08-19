@@ -1,0 +1,34 @@
+---
+title: "ABMI Species Distribution Modeling Manual: All Species"
+author: 
+  - "Brandon Allen, Senior Terrestrial Ecologist, ABMI Science Centre"
+  - "Brendan Casey, Biodiversity Modelling Ecologist, ABMI Science Centre"
+  - "Elly Knight, Director, Boreal Avian Modelling (BAM) Centre, Biodiversity Pathways"
+  - "Emily Holden, Vegetation Ecologist, ABMI Science Centre"
+  - "Marcus Becker, Applied Ecologist, ABMI Science Centre"
+  - "David Roberts, Co-Director, ABMI Science Centre"
+date: "August 2026"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+---
+
+# About This Document
+
+**Purpose**  
+This document provides the technical details and limitations of the ABMI species distribution models and subsequent data products for all species.
+
+**Version**  
+This version of the species and species distribution manual (5.0; 2026-08-07) describes the results available on the ABMI Biodiversity Browser.
+
+**Suggested Citation**  
+Allen, B.E., Casey, B., Knight, E., Holden, E., Becker, M., Roberts, D. (2026). ABMI Species Distribution Modeling Manual: All Species.. August 2026. Alberta Biodiversity Monitoring Institute, Edmonton, Alberta, Canada. URL: [https://abbiodiversity.github.io/SDM_Documentation/](https://abbiodiversity.github.io/SDM_Documentation/).
+
+**Contact Information**  
+For questions or concerns about this document, please contact:  
+Brandon Allen, Science Centre Senior Terrestrial Ecologist  
+Alberta Biodiversity Monitoring Institute  
+CW 405 Biological Sciences Centre  
+University of Alberta  
+Edmonton, Alberta  
+Canada, T6G 2E9  
+Email: brandon.allen@ualberta.ca
