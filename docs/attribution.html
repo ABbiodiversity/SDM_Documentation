@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Attribution | ABMI Species Distribution Modeling Manual: All Species</title>
+  <meta name="description" content="5 Attribution | ABMI Species Distribution Modeling Manual: All Species" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Attribution | ABMI Species Distribution Modeling Manual: All Species" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Attribution | ABMI Species Distribution Modeling Manual: All Species" />
+  
+  
+  
+
+<meta name="author" content="Brandon Allen, Senior Terrestrial Ecologist, ABMI Science Centre" />
+<meta name="author" content="Brendan Casey, Biodiversity Modelling Ecologist, ABMI Science Centre" />
+<meta name="author" content="Elly Knight, Director, Boreal Avian Modelling (BAM) Centre, Biodiversity Pathways" />
+<meta name="author" content="Emily Holden, Vegetation Ecologist, ABMI Science Centre" />
+<meta name="author" content="Marcus Becker, Applied Ecologist, ABMI Science Centre" />
+<meta name="author" content="David Roberts, Co-Director, ABMI Science Centre" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="predictive-maps.html"/>
+<link rel="next" href="biodiversity-intactness-index.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ABMI Species Distribution Modeling Manual: All Species</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About This Document</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="modeling-framework.html"><a href="modeling-framework.html"><i class="fa fa-check"></i><b>3</b> Modeling Framework</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-framework.html"><a href="modeling-framework.html#sampling-design-adequacy-and-detection-issues"><i class="fa fa-check"></i><b>3.1</b> Sampling design adequacy and detection issues</a></li>
+<li class="chapter" data-level="3.2" data-path="modeling-framework.html"><a href="modeling-framework.html#sample-size"><i class="fa fa-check"></i><b>3.2</b> Sample size</a></li>
+<li class="chapter" data-level="3.3" data-path="modeling-framework.html"><a href="modeling-framework.html#detectability"><i class="fa fa-check"></i><b>3.3</b> Detectability</a></li>
+<li class="chapter" data-level="3.4" data-path="modeling-framework.html"><a href="modeling-framework.html#bioclimatic-models"><i class="fa fa-check"></i><b>3.4</b> Bioclimatic models</a></li>
+<li class="chapter" data-level="3.5" data-path="modeling-framework.html"><a href="modeling-framework.html#landcover-models"><i class="fa fa-check"></i><b>3.5</b> Landcover models</a></li>
+<li class="chapter" data-level="3.6" data-path="modeling-framework.html"><a href="modeling-framework.html#integrating-data-sources"><i class="fa fa-check"></i><b>3.6</b> Integrating data sources</a></li>
+<li class="chapter" data-level="3.7" data-path="modeling-framework.html"><a href="modeling-framework.html#integrating-regional-models"><i class="fa fa-check"></i><b>3.7</b> Integrating regional models</a></li>
+<li class="chapter" data-level="3.8" data-path="modeling-framework.html"><a href="modeling-framework.html#model-output-plausibility"><i class="fa fa-check"></i><b>3.8</b> Model output plausibility</a></li>
+<li class="chapter" data-level="3.9" data-path="modeling-framework.html"><a href="modeling-framework.html#data-products"><i class="fa fa-check"></i><b>3.9</b> Data products</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="modeling-framework.html"><a href="modeling-framework.html#specieshabitat-associations-in-northern-alberta"><i class="fa fa-check"></i><b>3.9.1</b> Species–habitat associations in northern Alberta</a></li>
+<li class="chapter" data-level="3.9.2" data-path="modeling-framework.html"><a href="modeling-framework.html#specieshabitat-associations-in-southern-alberta"><i class="fa fa-check"></i><b>3.9.2</b> Species–habitat associations in southern Alberta</a></li>
+<li class="chapter" data-level="3.9.3" data-path="modeling-framework.html"><a href="modeling-framework.html#linear-footprint-relationships"><i class="fa fa-check"></i><b>3.9.3</b> Linear footprint relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="modeling-framework.html"><a href="modeling-framework.html#limitations"><i class="fa fa-check"></i><b>3.10</b> Limitations</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="modeling-framework.html"><a href="modeling-framework.html#simple-measures-of-abundance"><i class="fa fa-check"></i><b>3.10.1</b> Simple measures of abundance</a></li>
+<li class="chapter" data-level="3.10.2" data-path="modeling-framework.html"><a href="modeling-framework.html#high-uncertainty-in-individual-values"><i class="fa fa-check"></i><b>3.10.2</b> High uncertainty in individual values</a></li>
+<li class="chapter" data-level="3.10.3" data-path="modeling-framework.html"><a href="modeling-framework.html#explanatory-variables-are-confounded"><i class="fa fa-check"></i><b>3.10.3</b> Explanatory variables are confounded</a></li>
+<li class="chapter" data-level="3.10.4" data-path="modeling-framework.html"><a href="modeling-framework.html#single-modeling-framework-for-all-species"><i class="fa fa-check"></i><b>3.10.4</b> Single modeling framework for all species</a></li>
+<li class="chapter" data-level="3.10.5" data-path="modeling-framework.html"><a href="modeling-framework.html#errors-in-species-identification"><i class="fa fa-check"></i><b>3.10.5</b> Errors in species identification</a></li>
+<li class="chapter" data-level="3.10.6" data-path="modeling-framework.html"><a href="modeling-framework.html#vegetation-and-soil-classifications-are-simplified-and-contain-errors"><i class="fa fa-check"></i><b>3.10.6</b> Vegetation and soil classifications are simplified and contain errors</a></li>
+<li class="chapter" data-level="3.10.7" data-path="modeling-framework.html"><a href="modeling-framework.html#broad-classes-of-human-footprint"><i class="fa fa-check"></i><b>3.10.7</b> Broad classes of human footprint</a></li>
+<li class="chapter" data-level="3.10.8" data-path="modeling-framework.html"><a href="modeling-framework.html#no-additional-effects-of-human-activities-outside-of-habitat-type-change"><i class="fa fa-check"></i><b>3.10.8</b> No additional effects of human activities outside of habitat type change</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="predictive-maps.html"><a href="predictive-maps.html"><i class="fa fa-check"></i><b>4</b> Predictive maps</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="predictive-maps.html"><a href="predictive-maps.html#reference-condition"><i class="fa fa-check"></i><b>4.1</b> Reference condition</a></li>
+<li class="chapter" data-level="4.2" data-path="predictive-maps.html"><a href="predictive-maps.html#current-condition"><i class="fa fa-check"></i><b>4.2</b> Current condition</a></li>
+<li class="chapter" data-level="4.3" data-path="predictive-maps.html"><a href="predictive-maps.html#limitations-1"><i class="fa fa-check"></i><b>4.3</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="attribution.html"><a href="attribution.html"><i class="fa fa-check"></i><b>5</b> Attribution</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="attribution.html"><a href="attribution.html#local-scale-effects"><i class="fa fa-check"></i><b>5.1</b> Local scale effects</a></li>
+<li class="chapter" data-level="5.2" data-path="attribution.html"><a href="attribution.html#regional-scale-effects"><i class="fa fa-check"></i><b>5.2</b> Regional scale effects</a></li>
+<li class="chapter" data-level="5.3" data-path="attribution.html"><a href="attribution.html#change-over-time"><i class="fa fa-check"></i><b>5.3</b> Change over time</a></li>
+<li class="chapter" data-level="5.4" data-path="attribution.html"><a href="attribution.html#limitations-2"><i class="fa fa-check"></i><b>5.4</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html"><i class="fa fa-check"></i><b>6</b> Biodiversity Intactness Index</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html#methods"><i class="fa fa-check"></i><b>6.1</b> Methods</a></li>
+<li class="chapter" data-level="6.2" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html#limitations-3"><i class="fa fa-check"></i><b>6.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="richness.html"><a href="richness.html"><i class="fa fa-check"></i><b>7</b> Richness</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="richness.html"><a href="richness.html#methods-1"><i class="fa fa-check"></i><b>7.1</b> Methods</a></li>
+<li class="chapter" data-level="7.2" data-path="richness.html"><a href="richness.html#limitations-4"><i class="fa fa-check"></i><b>7.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 8.0 References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/ABbiodiversity" target="blank">Published by ABMI</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABMI Species Distribution Modeling Manual: All Species</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="attribution" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Attribution<a href="attribution.html#attribution" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We calculate the effects of different industrial sectors on habitat suitability by predicting the abundance of each species in the current landbase versus a landbase in which the footprint associated with a particular industrial sector has been back-filled. ‘Back-filling’ means replacing that sector’s footprint with the vegetation or soil type that would have been present before the footprint was made. The difference between the total predicted population in the current and the back-filled landbase is the predicted effect of that sector on the abundance of a species in the region.</p>
+<div id="local-scale-effects" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Local scale effects<a href="attribution.html#local-scale-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Local scale effects represent how habitat suitability for a species changes in the immediate area where a sector’s footprint occurs. It is the difference between the habitat suitability for a species in the native habitat prior to the footprint and its habitat suitability within the sector’s footprint itself.</p>
+<p><span class="math display">\[Local\ scale\ sector\ effect =  \frac{Current_{sector} - Reference_{sector}}{Reference_{sector}} * 100%\]</span></p>
+</div>
+<div id="regional-scale-effects" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Regional scale effects<a href="attribution.html#regional-scale-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Regional effects represent how habitat suitability in the region changes due to a sector’s footprint in that region. A sector’s effect on the regional habitat suitability for a species shows how much the habitat suitability across the region is predicted to have changed due to that sector’s footprint in the region. It is the difference between the habitat suitability for the species in the reference landscape with all human footprint removed, and the reference landscape with just that sector’s footprint added back in.</p>
+<p><span class="math display">\[Regional\ scale\ sector\ effect =  \frac{Current_{sector} - Reference_{sector}}{Reference_{landscape}} * 100%\]</span></p>
+<p>Three factors determine a sector’s effect on the regional habitat suitability for a species:</p>
+<ol style="list-style-type: decimal">
+<li>How much area that industry’s footprint occupies.</li>
+<li>The local-footprint effect of that sector on habitat suitability.</li>
+<li>What habitat types the sector operates in.</li>
+</ol>
+<p>The species most negatively affected by an industrial sector will therefore be species that are least tolerant of that sector’s footprint and that prefer to live in habitat types where more of the sector’s footprint occurs.</p>
+<center>
+<div class="float">
+<img src="SDM_Documentation_files/figure-html/images/sector-forested.jpeg" style="width:80.0%" alt="Predicted regional (left) and local (under footprint; right) sector effects. Y-axis is scaled to the maximum of each effect and are assessed in each modeling region." />
+<div class="figcaption">Predicted regional (left) and local (under footprint; right) sector effects. Y-axis is scaled to the maximum of each effect and are assessed in each modeling region.</div>
+</div>
+</div>
+<div id="change-over-time" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Change over time<a href="attribution.html#change-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Our “backfilled” reference layer represents a hypothetical modern landscape where human footprint did not occur. In this sense, it does not represent the landscape prior to colonization, as we do not reconstruct landcover backwards in time. Therefore, in order to assess how the impacts of industrial sectors compare to natural forest dynamics (i.e., wildfires, aging), we attribute regional sector impacts between 2010 and 2021. We summarize landscape transitions into six classes:</p>
+<ol style="list-style-type: decimal">
+<li>Aging of native forest that is undisturbed over that span.</li>
+<li>Aging of harvest areas that existed in the first year.</li>
+<li>Fires.</li>
+<li>New forestry footprint.</li>
+<li>New non-forestry human footprint (HF) replacing native habitat and harvest areas.</li>
+<li>Changes in non-forestry HF that existed in the first year.</li>
+</ol>
+<p>These summaries can be interpreted the same as the regional scale effects.</p>
+</div>
+<div id="limitations-2" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Limitations<a href="attribution.html#limitations-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The sector effect results are based on each species’ habitat models applied to the maps of vegetation or soils and footprint in the region, so all the limitations of the modeling and mapping apply to these results. There are also additional caveats for sector effects:</p>
+<ul>
+<li>Where footprint types overlap, such as a well site in a cultivated field, or a road through a forestry cutblock, we assign the sector footprint type as being ‘on top’, and the effect of the footprint is allocated to the overlapping sector.</li>
+<li>We do not have information on which roads are associated with particular sectors, such as roads to well sites or roads in forestry cutblocks. Therefore, all roads are considered as part of the transportation sector.</li>
+<li>Two sectors sometimes operate together to reduce cumulative effects, such as forestry cutblocks being placed where energy developments are planned. A forestry cutblock on a future wellsite, for example, would be assigned to forestry until the wellpad was built, at which point that footprint area would change from forestry to the energy sector.</li>
+<li>We have difficulty separating some types of footprint, such as urban and industrial areas, so those types are assigned to only one of the two sectors involved.</li>
+<li>Sector effects only include direct effects of footprint, not indirect effects (e.g., pollution, noise, access effects) or possible cumulative effects where two or more sectors interact (e.g., roads allowing weeds into an area, where they can then colonize harvest areas).</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="predictive-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="biodiversity-intactness-index.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

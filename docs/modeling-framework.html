@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Modeling Framework | ABMI Species Distribution Modeling Manual: All Species</title>
+  <meta name="description" content="3 Modeling Framework | ABMI Species Distribution Modeling Manual: All Species" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Modeling Framework | ABMI Species Distribution Modeling Manual: All Species" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Modeling Framework | ABMI Species Distribution Modeling Manual: All Species" />
+  
+  
+  
+
+<meta name="author" content="Brandon Allen, Senior Terrestrial Ecologist, ABMI Science Centre" />
+<meta name="author" content="Brendan Casey, Biodiversity Modelling Ecologist, ABMI Science Centre" />
+<meta name="author" content="Elly Knight, Director, Boreal Avian Modelling (BAM) Centre, Biodiversity Pathways" />
+<meta name="author" content="Emily Holden, Vegetation Ecologist, ABMI Science Centre" />
+<meta name="author" content="Marcus Becker, Applied Ecologist, ABMI Science Centre" />
+<meta name="author" content="David Roberts, Co-Director, ABMI Science Centre" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="predictive-maps.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ABMI Species Distribution Modeling Manual: All Species</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About This Document</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="modeling-framework.html"><a href="modeling-framework.html"><i class="fa fa-check"></i><b>3</b> Modeling Framework</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-framework.html"><a href="modeling-framework.html#sampling-design-adequacy-and-detection-issues"><i class="fa fa-check"></i><b>3.1</b> Sampling design adequacy and detection issues</a></li>
+<li class="chapter" data-level="3.2" data-path="modeling-framework.html"><a href="modeling-framework.html#sample-size"><i class="fa fa-check"></i><b>3.2</b> Sample size</a></li>
+<li class="chapter" data-level="3.3" data-path="modeling-framework.html"><a href="modeling-framework.html#detectability"><i class="fa fa-check"></i><b>3.3</b> Detectability</a></li>
+<li class="chapter" data-level="3.4" data-path="modeling-framework.html"><a href="modeling-framework.html#bioclimatic-models"><i class="fa fa-check"></i><b>3.4</b> Bioclimatic models</a></li>
+<li class="chapter" data-level="3.5" data-path="modeling-framework.html"><a href="modeling-framework.html#landcover-models"><i class="fa fa-check"></i><b>3.5</b> Landcover models</a></li>
+<li class="chapter" data-level="3.6" data-path="modeling-framework.html"><a href="modeling-framework.html#integrating-data-sources"><i class="fa fa-check"></i><b>3.6</b> Integrating data sources</a></li>
+<li class="chapter" data-level="3.7" data-path="modeling-framework.html"><a href="modeling-framework.html#integrating-regional-models"><i class="fa fa-check"></i><b>3.7</b> Integrating regional models</a></li>
+<li class="chapter" data-level="3.8" data-path="modeling-framework.html"><a href="modeling-framework.html#model-output-plausibility"><i class="fa fa-check"></i><b>3.8</b> Model output plausibility</a></li>
+<li class="chapter" data-level="3.9" data-path="modeling-framework.html"><a href="modeling-framework.html#data-products"><i class="fa fa-check"></i><b>3.9</b> Data products</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="modeling-framework.html"><a href="modeling-framework.html#specieshabitat-associations-in-northern-alberta"><i class="fa fa-check"></i><b>3.9.1</b> Species–habitat associations in northern Alberta</a></li>
+<li class="chapter" data-level="3.9.2" data-path="modeling-framework.html"><a href="modeling-framework.html#specieshabitat-associations-in-southern-alberta"><i class="fa fa-check"></i><b>3.9.2</b> Species–habitat associations in southern Alberta</a></li>
+<li class="chapter" data-level="3.9.3" data-path="modeling-framework.html"><a href="modeling-framework.html#linear-footprint-relationships"><i class="fa fa-check"></i><b>3.9.3</b> Linear footprint relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="modeling-framework.html"><a href="modeling-framework.html#limitations"><i class="fa fa-check"></i><b>3.10</b> Limitations</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="modeling-framework.html"><a href="modeling-framework.html#simple-measures-of-abundance"><i class="fa fa-check"></i><b>3.10.1</b> Simple measures of abundance</a></li>
+<li class="chapter" data-level="3.10.2" data-path="modeling-framework.html"><a href="modeling-framework.html#high-uncertainty-in-individual-values"><i class="fa fa-check"></i><b>3.10.2</b> High uncertainty in individual values</a></li>
+<li class="chapter" data-level="3.10.3" data-path="modeling-framework.html"><a href="modeling-framework.html#explanatory-variables-are-confounded"><i class="fa fa-check"></i><b>3.10.3</b> Explanatory variables are confounded</a></li>
+<li class="chapter" data-level="3.10.4" data-path="modeling-framework.html"><a href="modeling-framework.html#single-modeling-framework-for-all-species"><i class="fa fa-check"></i><b>3.10.4</b> Single modeling framework for all species</a></li>
+<li class="chapter" data-level="3.10.5" data-path="modeling-framework.html"><a href="modeling-framework.html#errors-in-species-identification"><i class="fa fa-check"></i><b>3.10.5</b> Errors in species identification</a></li>
+<li class="chapter" data-level="3.10.6" data-path="modeling-framework.html"><a href="modeling-framework.html#vegetation-and-soil-classifications-are-simplified-and-contain-errors"><i class="fa fa-check"></i><b>3.10.6</b> Vegetation and soil classifications are simplified and contain errors</a></li>
+<li class="chapter" data-level="3.10.7" data-path="modeling-framework.html"><a href="modeling-framework.html#broad-classes-of-human-footprint"><i class="fa fa-check"></i><b>3.10.7</b> Broad classes of human footprint</a></li>
+<li class="chapter" data-level="3.10.8" data-path="modeling-framework.html"><a href="modeling-framework.html#no-additional-effects-of-human-activities-outside-of-habitat-type-change"><i class="fa fa-check"></i><b>3.10.8</b> No additional effects of human activities outside of habitat type change</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="predictive-maps.html"><a href="predictive-maps.html"><i class="fa fa-check"></i><b>4</b> Predictive maps</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="predictive-maps.html"><a href="predictive-maps.html#reference-condition"><i class="fa fa-check"></i><b>4.1</b> Reference condition</a></li>
+<li class="chapter" data-level="4.2" data-path="predictive-maps.html"><a href="predictive-maps.html#current-condition"><i class="fa fa-check"></i><b>4.2</b> Current condition</a></li>
+<li class="chapter" data-level="4.3" data-path="predictive-maps.html"><a href="predictive-maps.html#limitations-1"><i class="fa fa-check"></i><b>4.3</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="attribution.html"><a href="attribution.html"><i class="fa fa-check"></i><b>5</b> Attribution</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="attribution.html"><a href="attribution.html#local-scale-effects"><i class="fa fa-check"></i><b>5.1</b> Local scale effects</a></li>
+<li class="chapter" data-level="5.2" data-path="attribution.html"><a href="attribution.html#regional-scale-effects"><i class="fa fa-check"></i><b>5.2</b> Regional scale effects</a></li>
+<li class="chapter" data-level="5.3" data-path="attribution.html"><a href="attribution.html#change-over-time"><i class="fa fa-check"></i><b>5.3</b> Change over time</a></li>
+<li class="chapter" data-level="5.4" data-path="attribution.html"><a href="attribution.html#limitations-2"><i class="fa fa-check"></i><b>5.4</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html"><i class="fa fa-check"></i><b>6</b> Biodiversity Intactness Index</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html#methods"><i class="fa fa-check"></i><b>6.1</b> Methods</a></li>
+<li class="chapter" data-level="6.2" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html#limitations-3"><i class="fa fa-check"></i><b>6.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="richness.html"><a href="richness.html"><i class="fa fa-check"></i><b>7</b> Richness</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="richness.html"><a href="richness.html#methods-1"><i class="fa fa-check"></i><b>7.1</b> Methods</a></li>
+<li class="chapter" data-level="7.2" data-path="richness.html"><a href="richness.html#limitations-4"><i class="fa fa-check"></i><b>7.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 8.0 References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/ABbiodiversity" target="blank">Published by ABMI</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABMI Species Distribution Modeling Manual: All Species</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modeling-framework" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Modeling Framework<a href="modeling-framework.html#modeling-framework" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Species distribution models (SDMs) are used to show how species relative occurrence or abundance differed among vegetation, soil and human footprint types in the northern, and southern regions of Alberta. We implemented a nested SDM framework which uses predictions from a global bioclimatic model as a covariate in the regional model that captures habitat relationships (covariate nesting ensemble, Adde et al., 2023).</p>
+<div id="sampling-design-adequacy-and-detection-issues" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Sampling design adequacy and detection issues<a href="modeling-framework.html#sampling-design-adequacy-and-detection-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ABMI’s monitoring program is designed to determine habitat associations and track population trends for common species. We survey a systematic grid of 1656 sites, located approximately 20 km apart. The chosen sampling methods, however, do not capture all species effectively, including species that live in rare patchy habitats. A number of species are inadequately sampled or detected, because:</p>
+<ul>
+<li>Survey season is not optimized (too early/too late) to sample the species when their characteristic features (flowers, and seeds) for field identification are available to distinguish them from similar species in the field. Problematic vascular plants are downgraded to genus or family level in the data.</li>
+<li>Survey protocol is not designed to sample specific species within taxonomic groups (e.g., crustose lichens).</li>
+<li>The species is part of taxonomically complex groups which makes it difficult to distinguish them. This applies particularly for lichens and bryophytes, and a few vascular plants. These species are analyzed at genus level or species group level.</li>
+<li>A low sampling effort throughout the Rocky Mountains.</li>
+<li>Their habitats are not well sampled (e.g., waterfowl, shorebirds).</li>
+<li>Their nocturnal activity periods are not well sampled (e.g., rails, owls).</li>
+<li>They vocalize irregularly or infrequently.</li>
+<li>Their home range is at a much larger spatial scale than sampled by point counts (e.g., raptors, owls).</li>
+</ul>
+</div>
+<div id="sample-size" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Sample size<a href="modeling-framework.html#sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ABMI conducts separate analyses for two regions: vegetation-based models for the Northern region (Boreal, Canadian shield, Foothills, Parkland, and Rocky Mountain natural regions), which is vegetation-based and soil-based models for the Southern region (Grassland, Parkland natural regions and the Dry Mixedwood natural subregion), which is soil based. The vegetation-based models require on average 20 degrees of freedom (df) with habitat/age/climate terms in the models. The soil-based models require on average 10 df with soil/climate terms in the model. Accordingly, modeling is carried out for all species that occur in at least 20 sites in an analysis region.</p>
+</div>
+<div id="detectability" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Detectability<a href="modeling-framework.html#detectability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The probability that a bird will vocalize is dependent on several seasonal and environmental factors. If we don’t correct for this probability of detection, we might mis-interpret absences as a signal of unsuitable habitat, when in reality the survey occurred outside the breeding season and we wouldn’t expect birds to be calling even if present. We used the R package QPAD (Solymos 2013) to calculate statistical offsets for detection probability in all of our bird models. For amphibians, a similar statistical offset for each species was calculated based on the time of year and hourly temperature at the time of recording.</p>
+</div>
+<div id="bioclimatic-models" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Bioclimatic models<a href="modeling-framework.html#bioclimatic-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To represent the geographic and bioclimatic distributions of species in Alberta, we developed a suite of models that use flexible relationships between geography and climate. These models are developed at the provincial scale (i.e., global model as defined by Adde et al., 2023), whereas the landcover models are geographically restricted and are considered regional models. The downscaled bioclimatic variables used in the provincial models were calculated using the ClimateNA tool (version 7.4) based on the 1991-2020 climate normals (Wang et al., 2016) and additional bioclimatic variables were calculated using the dismo R package (Hijmans et al., 2022; table 1.0). Each taxonomic group was able to utilize a unique set of these candidate variables that best suited their ecology.</p>
+<p><strong>Table 1.0.</strong> Bioclimatic variables extracted from the ClimateNA tool or the dismo R package that are used to generate provincial bioclimatic models.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Definition</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">MAT</td>
+<td align="left">Mean annual temperature</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="even">
+<td align="left">EMT</td>
+<td align="left">Extreme Minimum Temperature</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="odd">
+<td align="left">FFP</td>
+<td align="left">Frost-free Period</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="even">
+<td align="left">TD</td>
+<td align="left">Temperature differences between mean warm month temperature and mean cold month temperature</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="odd">
+<td align="left">MAP</td>
+<td align="left">Mean annual precipitation</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="even">
+<td align="left">CMD</td>
+<td align="left">Hargreaves climate moisture deficit</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="odd">
+<td align="left">Eref</td>
+<td align="left">Hargreavess reference evaporation</td>
+<td align="left">ClimateNA</td>
+</tr>
+<tr class="even">
+<td align="left">Bio9</td>
+<td align="left">Mean temperature of driest quarter</td>
+<td align="left">ClimateNA, dismo</td>
+</tr>
+<tr class="odd">
+<td align="left">Bio15</td>
+<td align="left">Precipitation seasonality</td>
+<td align="left">ClimateNA, dismo</td>
+</tr>
+<tr class="even">
+<td align="left">Easting</td>
+<td align="left">Spatial coordinates (UTM 10)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Northing</td>
+<td align="left">Spatial coordinates (UTM 10)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>For each taxonomic group, we defined a suite of candidate models and implemented an ensemble modeling approach using corrected Akaike Information Criterion. The predictions from this ensemble model were used as a single covariate (i.e., Climate) in the regional landcover models.</p>
+</div>
+<div id="landcover-models" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Landcover models<a href="modeling-framework.html#landcover-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We use a set of statistical models to relate the occurrence or relative abundance of each species measured at ABMI sites to two sets of variables: native landcover (vegetation or soil) and human footprint type. The reason for using two regional models (i.e., northern vegetation and southern soil) is that the number of vegetation classes available in provincial landcover products were limited in the south (e.g., grass, shrub, and water). This resulted in SDMs that were primarily driven by bioclimatic relationships and were insensitive to habitat change. Vegetation, soil, and human footprint information was summarized for each 50 m x 50 m quadrat.</p>
+<p>Vegetation types in the North region are based on several province-wide GIS layers of vegetation variables, and include main forest stand types (white spruce, pine, deciduous, mixedwood, black spruce) by broad age classes (0-9 years, 10-19 years, then 20-year classes to 140+ years) and several categories of treed (treed fen, treed swamp), shrubby (shrubby bog, shrubby fen, shrubby swamp) and open (graminoid fen, marsh, upland grass, upland shrub) vegetation. In the South, ‘vegetation types’ are broad soil types, such as productive, rapid draining, etc. The South models also include a term for the probability that the site is or was naturally treed.</p>
+<p>Several categories of human footprint are distinguished in the models, including cultivation (crop, rough pasture, and tame pasture), rural residential, urban/industrial, rural residential, wellsites, forestry, soft (vegetated) linear features and hard (unvegetated) linear features. Forestry footprint is differentiated by broad stand type and the same age classes as natural forest (although we have limited samples in forestry areas &gt;20 years old).</p>
+<p>The analysis is conducted in a ‘model selection framework’, which means that the models for each species are only as complex as the data for that species support. For example, the models for a rarer species with few records may not be able to separate different age classes or even broad stand types. All age classes or several stand types therefore have the same average value in the resulting habitat model. This does not mean that there are truly no differences between these types for that species. It just means that we do not yet have enough data to estimate abundances in all those individual vegetation types.</p>
+<p>For both modeling regions, we evaluated two methods for creating the single ensemble landcover model: 1) AUC model weighting; 2) Inverse variance weighting. On average, both approaches produced similar results. Therefore, we adopted the inverse variance weighting approach for all species in these taxonomic groups.</p>
+</div>
+<div id="integrating-data-sources" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Integrating data sources<a href="modeling-framework.html#integrating-data-sources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Birds models are developed using a variety of data sources collected by the ABMI, our partner organizations, and publicly available data sources such as eBird. Survey data was standardized by using the R package QPAD.</p>
+<p>Amphibian models are developed only using occurrence records collected by the ABMI and our partner organizations. These data were all collected through the use of autonomous recording units. We standardize all recording types to include only the first minute of a recording.</p>
+<p>Mammal models are developed only using camera trap data collected by the ABMI and our partner organizations. The observed densities at each camera were standardized before being modeled based on the height of the camera, camera model, deployment on game trails, and the use of lures.</p>
+<p>Lichen, bryophyte, vascular plant, and soil mite models are developed only using occurrence records collected by the ABMI. However, the protocols used to collect this information have changed over time. Therefore, we add a statistical offset to account for protocol differences when appropriate.</p>
+</div>
+<div id="integrating-regional-models" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Integrating regional models<a href="modeling-framework.html#integrating-regional-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For species for which there is a sufficient sample to produce both vegetation and soil based models, we use weights to combine the two sets of predictions for weighting the predictions in regions where either model would be suitable (i.e., Parkland and Dry Mixedwood subregion). This weight is based on the probability an area supports trees (pAspen), the amount of unknown soil information (pSoil), and the amount of treed areas (pFor) and is calculated as follows:</p>
+<p><span class="math display">\[North\ weight =  \frac{pAspen}{pAspen - (1-pFor)}\]</span></p>
+<p><span class="math display">\[South\ weight = (1- pAspen) * (1-pSoil) * (1- pFor)\]</span></p>
+<p><span class="math display">\[North\ weight =  \frac{North\ weight}{North\ weight + South\ weight}\]</span></p>
+<p><span class="math display">\[South\ weight =  1 - North\ weight\]</span></p>
+<center>
+<div class="float">
+<img src="SDM_Documentation_files/figure-html/images/model-weighting.png" style="width:80.0%" alt="Weighting used to combine the vegetation (north weight) and soil (south weight) based models." />
+<div class="figcaption">Weighting used to combine the vegetation (north weight) and soil (south weight) based models.</div>
+</div>
+</center>
+</div>
+<div id="model-output-plausibility" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Model output plausibility<a href="modeling-framework.html#model-output-plausibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once a species meets the minimum sample size within an analysis region, we assess both statistical fit (e.g., AUC, r-squared) and perform a visual inspection of the model to evaluate the plausibility of the output. The following visual inspection procedure is completed by both the ABMI Science Centre lead who developed the models as well as a taxonomic leads:</p>
+<ul>
+<li>Determining whether habitat associations are compatible with known biology of species.</li>
+<li>Determining whether confidence intervals in habitat associations are extreme (relative to mean abundance).</li>
+<li>Determining whether the predicted distribution of the species is compatible with the known spatial distribution of the species (range maps, detections).</li>
+</ul>
+<p>If species pass both the statistical evaluation (AUC &gt; 0.7) and visual inspection, notes are added to the species lookup table and final decisions are made. This way the steps in the evaluation process are transparent and decisions can be re-evaluated if needed. These are incorporated into the species taxonomic information table to make the process and any caveats transparent.</p>
+</div>
+<div id="data-products" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Data products<a href="modeling-framework.html#data-products" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For each species model we produce the following set of figures:</p>
+<div id="specieshabitat-associations-in-northern-alberta" class="section level3 hasAnchor" number="3.9.1">
+<h3><span class="header-section-number">3.9.1</span> Species–habitat associations in northern Alberta<a href="modeling-framework.html#specieshabitat-associations-in-northern-alberta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<div class="float">
+<img src="SDM_Documentation_files/figure-html/images/veghf.jpeg" style="width:80.0%" alt="Predicted species occurrence or abundance in each vegetation and human footprint type is shown with bars. Vertical lines indicate 90% confidence intervals. Dots within the forested habitat types show predicted species abundance in forest harvest areas of various ages." />
+<div class="figcaption">Predicted species occurrence or abundance in each vegetation and human footprint type is shown with bars. Vertical lines indicate 90% confidence intervals. Dots within the forested habitat types show predicted species abundance in forest harvest areas of various ages.</div>
+</div>
+</center>
+</div>
+<div id="specieshabitat-associations-in-southern-alberta" class="section level3 hasAnchor" number="3.9.2">
+<h3><span class="header-section-number">3.9.2</span> Species–habitat associations in southern Alberta<a href="modeling-framework.html#specieshabitat-associations-in-southern-alberta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<div class="float">
+<img src="SDM_Documentation_files/figure-html/images/soilhf.jpeg" style="width:80.0%" alt="Due to climate and soil conditions, natural disturbances and vegetation succession, varying amounts of aspen and other tree species may be present on each soil type in the south (Non-treed sites and Treed sites); the presence/absence of trees greatly affects the presence and abundance of many other biota. Separate figures are presented for south Non-treed sites and Treed sites. Predicted species abundance in each soil/human footprint type is shown with bars. Vertical lines indicate 90% confidence intervals." />
+<div class="figcaption">Due to climate and soil conditions, natural disturbances and vegetation succession, varying amounts of aspen and other tree species may be present on each soil type in the south (Non-treed sites and Treed sites); the presence/absence of trees greatly affects the presence and abundance of many other biota. Separate figures are presented for south Non-treed sites and Treed sites. Predicted species abundance in each soil/human footprint type is shown with bars. Vertical lines indicate 90% confidence intervals.</div>
+</div>
+</center>
+</div>
+<div id="linear-footprint-relationships" class="section level3 hasAnchor" number="3.9.3">
+<h3><span class="header-section-number">3.9.3</span> Linear footprint relationships<a href="modeling-framework.html#linear-footprint-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<div class="float">
+<img src="SDM_Documentation_files/figure-html/images/linear-forested.jpeg" style="width:80.0%" alt="Predicted changes to relative abundance inside areas that have been disturbed by each linear feature compared to the habitat it replaced (modelled reference condition with no linear footprint). Footprint effect values less than 0% indicate that habitat suitability is reduced (predicted related abundance is lower) compared to reference conditions, and values more than 0% indicate that habitat suitability is improved (predicted relative abundance is higher) compared to reference conditions. These relationships are assessed in each modeling region. Linear footprint categories are defined as: Energy Seismic = wide and narrow seismic lines; Energy Soft Linear = pipeline and transmission lines; Transportation Soft Linear = road and rail verges; Hard Linear = roads and rails." />
+<div class="figcaption">Predicted changes to relative abundance inside areas that have been disturbed by each linear feature compared to the habitat it replaced (modelled reference condition with no linear footprint). Footprint effect values less than 0% indicate that habitat suitability is reduced (predicted related abundance is lower) compared to reference conditions, and values more than 0% indicate that habitat suitability is improved (predicted relative abundance is higher) compared to reference conditions. These relationships are assessed in each modeling region. Linear footprint categories are defined as: Energy Seismic = wide and narrow seismic lines; Energy Soft Linear = pipeline and transmission lines; Transportation Soft Linear = road and rail verges; Hard Linear = roads and rails.</div>
+</div>
+</center>
+</div>
+</div>
+<div id="limitations" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Limitations<a href="modeling-framework.html#limitations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are many limitations and caveats about the use of these habitat models.</p>
+<div id="simple-measures-of-abundance" class="section level3 hasAnchor" number="3.10.1">
+<h3><span class="header-section-number">3.10.1</span> Simple measures of abundance<a href="modeling-framework.html#simple-measures-of-abundance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For birds, the measure is based on counts of birds heard in the field by trained observers in some studies, or heard on recordings made using various technologies in others (including ABMI). These are mainly, but not exclusively, singing male birds. Adjustments are made for different detection distances in the different studies, habitats and for different species, but these adjustments all have statistical uncertainty. The number of vocalizing birds may also not directly reflect the total number of birds or reproductive success in different habitat types.</p>
+<p>For amphibians, we are only analyzing the presence-absence relationships at a given site. This means we are unable to distinguish between habitats where a single amphibian is calling from a site with 1,000’s of individuals.</p>
+<p>For mammals, camera trap images need two additional processing steps to calculate density estimates. First, cameras do not survey fixed areas, unlike quadrats. The probability of an animal triggering the camera decreases with distance. We therefore have to estimate an effective detection distance for the cameras, as is done for unlimited-distance point counts for birds or unlimited distance transect surveys. This effective distance can vary for different species, habitat types and time of year.</p>
+<p>Second, cameras take a series of images at discrete intervals, rather than providing a continuous record of how long an animal is in the field-of-view. The discrete intervals need to be converted to a continuous measure to show how long the animal was in the field-of-view, accounting for the possibility that a moderately long interval between images might be from an animal present but not moving much, and therefore not triggering the camera, versus an animal that left the field-of-view and returned.</p>
+<p>For vascular plants, bryophytes, lichens and soil mites, we are only analyzing occurrences of the species at 0-4 of the 4 quadrats or soil samples per 50 m x 50 m quadrat. The number of individuals, percent cover, total volume or biomass, reproductive status, etc. of the species is not part of this measure. In other words, a single sapling of a tree species is an occurrence counted as much as complete cover of large trees. There is also no adjustment for the probability that the species was present but was missed by the field technicians (“detection probability”). That probability is probably higher in complicated quadrats, species rich habitats, rare species, and for groups of species that are hard to distinguish in the field, all of which could affect the habitat models.</p>
+</div>
+<div id="high-uncertainty-in-individual-values" class="section level3 hasAnchor" number="3.10.2">
+<h3><span class="header-section-number">3.10.2</span> High uncertainty in individual values<a href="modeling-framework.html#high-uncertainty-in-individual-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The confidence intervals on individual habitat values for a species are often wide, and should be considered when using the the habitat models. There are two main reasons for high uncertainty in our results:</p>
+<ol style="list-style-type: decimal">
+<li>We estimate values for many habitat and human footprint types, particularly in the North, with many combinations of broad stand types and age classes. Ideally we would have hundreds of observations per species to estimate so many parameters. Instead, we use a statistical modeling procedure to extract reasonable values for many species with lower sample sizes by simplifying the complexity of habitat types. For all but the most common species, the resulting habitat models are simplified (some habitat types are assumed to be the same) and estimated with large error.</li>
+<li>ABMI sites are systematically located (section 2.1), and the Alberta landbase often contains a fine-scale mix of several habitat types and human footprint. Individual sites, even 1-ha areas, therefore usually fall in more than one habitat and/or human footprint type. Our models are designed to separate out the effects of each individual habitat or human footprint type as best as possible, but the analysis is necessarily imperfect with limited sample sizes. A highly specialized species, for example, will almost inevitably show some predicted abundance in habitat types that it does not use, when these co-occur with preferred habitat types.</li>
+</ol>
+</div>
+<div id="explanatory-variables-are-confounded" class="section level3 hasAnchor" number="3.10.3">
+<h3><span class="header-section-number">3.10.3</span> Explanatory variables are confounded<a href="modeling-framework.html#explanatory-variables-are-confounded" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We have limited ability to separate effects of each landcover and human footprint type, and spatial and climate variables. In addition to the challenges generating uncertainty in the individual values, ABMI’s monitoring program is not an experimental study with habitat manipulation, but instead relies on observational science where we sample what already exists in the province. As a result, habitat and human footprint types are partially confounded with geographic location and climate variables. Our modeling separates out these effects to a certain degree, but without unfeasible province-wide experiments, we can never be sure how well we have estimated the separate habitat, human footprint and geographic/climate effects.</p>
+</div>
+<div id="single-modeling-framework-for-all-species" class="section level3 hasAnchor" number="3.10.4">
+<h3><span class="header-section-number">3.10.4</span> Single modeling framework for all species<a href="modeling-framework.html#single-modeling-framework-for-all-species" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Within a taxonomic group, our model selection approach weights different models in a model set based on the support provided by each species’ data. However, we use the same set of models for all species. We currently do not have the resources to develop separate model sets for individual species to benefit from the differences in natural history.</p>
+</div>
+<div id="errors-in-species-identification" class="section level3 hasAnchor" number="3.10.5">
+<h3><span class="header-section-number">3.10.5</span> Errors in species identification<a href="modeling-framework.html#errors-in-species-identification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>All taxa have the potential for errors in species identification, including the mammal image interpretation and the bird recording interpretation. Taxonomic issues are common with the plants, bryophytes, and lichens, where many species groups are difficult to distinguish and taxonomy changes frequently. This adds to uncertainty in models for some species.</p>
+</div>
+<div id="vegetation-and-soil-classifications-are-simplified-and-contain-errors" class="section level3 hasAnchor" number="3.10.6">
+<h3><span class="header-section-number">3.10.6</span> Vegetation and soil classifications are simplified and contain errors<a href="modeling-framework.html#vegetation-and-soil-classifications-are-simplified-and-contain-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ABMI’s landcover map (Alberta Biodiversity Monitoring Institute, 2017) is compiled from various sources, not all of which cover the entire province. Some layers are less accurate than others. Also, even if individual polygons are accurate, their boundaries may not be precise, and many ABMI sites fall on the edges of vegetation polygons. Resulting error in the vegetation types at sites increases error in the habitat models. Some habitat types may have additional challenges. Grass and shrub sites in the North, for example, may be true permanent open habitats, but the same designation is often given to early seral stages of forested sites after fire. Grass and shrub sites in the prairies are also poorly mapped. Mixedwood stands are also poorly mapped, because they represent a gradient between deciduous and upland conifer stands, which can often change as a stand ages.</p>
+<p>In the south, the soil classification currently uses only broad groupings of individual soil types. Few species show strong responses to soil type in our models, suggesting that these groups may not be well-defined or relevant to many species. We have too few sites to treat lowland sites in the South separately.</p>
+</div>
+<div id="broad-classes-of-human-footprint" class="section level3 hasAnchor" number="3.10.7">
+<h3><span class="header-section-number">3.10.7</span> Broad classes of human footprint<a href="modeling-framework.html#broad-classes-of-human-footprint" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Human footprint is generally mapped more precisely than vegetation, but we use only broad groups of footprint types. Industrial sites and urban or rural residential areas, for example, cannot be reliably distinguished. Values are particularly difficult to estimate reliably for linear features, because these usually occupy only a small portion of a site. We also have few sites with older forestry cutblocks. Values for those habitat types combine our rough estimates with an assumed rate of convergence of aging forestry and natural stands.</p>
+</div>
+<div id="no-additional-effects-of-human-activities-outside-of-habitat-type-change" class="section level3 hasAnchor" number="3.10.8">
+<h3><span class="header-section-number">3.10.8</span> No additional effects of human activities outside of habitat type change<a href="modeling-framework.html#no-additional-effects-of-human-activities-outside-of-habitat-type-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many sites in the South are grazed to varying degrees but specific data on grazing intensity is not available. Thus grazing effects cannot be included in our models and, if grazing differs among native habitat types, grazing effects can confound those habitat differences. Any wide-scale human effects, like pollution away from visible human footprint or recent climate change, are also not included in our modeling.</p>
+<p>Additionally, we only include effects of footprint at the local scale. Due to sample size constraints and confounding among variables, we do not include any additional effects that might be caused by human footprint in the larger surrounding area.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="predictive-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
