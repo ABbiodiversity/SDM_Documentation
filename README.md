@@ -14,15 +14,19 @@
 ![Languages](https://img.shields.io/badge/Languages-R-blue)
 
 **Purpose**  
+
 This document provides the technical details and limitations of the ABMI species distribution models and subsequent data products for all species.
 
 **Version**  
+
 This version of the species and species distribution manual (5.0; 2026-08-07) describes the results available on the ABMI Biodiversity Browser.
 
 **ABMIexploreR**
+
 The methodology described hear is how the models available through the [**ABMIexploreR**](https://abbiodiversity.github.io/ABMIexploreR/) *R* package were created.
 
 **Suggested Citation**  
+
 Allen, B.E., Casey, B., Knight, E., Holden, E., Becker, M., Roberts, D. (2026). ABMI Species Distribution Modeling Manual: All Species.. August 2026. Alberta Biodiversity Monitoring Institute, Edmonton, Alberta, Canada. URL: [https://abbiodiversity.github.io/SDM_Documentation/](https://abbiodiversity.github.io/SDM_Documentation/).
 
 **Contact Information**  
