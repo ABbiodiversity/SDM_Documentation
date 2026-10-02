@@ -120,8 +120,9 @@
 <ul>
 <li class="chapter" data-level="5.1" data-path="attribution.html"><a href="attribution.html#local-scale-effects"><i class="fa fa-check"></i><b>5.1</b> Local scale effects</a></li>
 <li class="chapter" data-level="5.2" data-path="attribution.html"><a href="attribution.html#regional-scale-effects"><i class="fa fa-check"></i><b>5.2</b> Regional scale effects</a></li>
-<li class="chapter" data-level="5.3" data-path="attribution.html"><a href="attribution.html#change-over-time"><i class="fa fa-check"></i><b>5.3</b> Change over time</a></li>
-<li class="chapter" data-level="5.4" data-path="attribution.html"><a href="attribution.html#limitations-2"><i class="fa fa-check"></i><b>5.4</b> Limitations</a></li>
+<li class="chapter" data-level="5.3" data-path="attribution.html"><a href="attribution.html#local-scale-effects-of-linear-features"><i class="fa fa-check"></i><b>5.3</b> Local scale effects of linear features</a></li>
+<li class="chapter" data-level="5.4" data-path="attribution.html"><a href="attribution.html#change-over-time"><i class="fa fa-check"></i><b>5.4</b> Change over time</a></li>
+<li class="chapter" data-level="5.5" data-path="attribution.html"><a href="attribution.html#limitations-2"><i class="fa fa-check"></i><b>5.5</b> Limitations</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="biodiversity-intactness-index.html"><a href="biodiversity-intactness-index.html"><i class="fa fa-check"></i><b>6</b> Biodiversity Intactness Index</a>
 <ul>
@@ -179,8 +180,13 @@
 <div class="figcaption">Predicted regional (left) and local (under footprint; right) sector effects. Y-axis is scaled to the maximum of each effect and are assessed in each modeling region.</div>
 </div>
 </div>
-<div id="change-over-time" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Change over time<a href="attribution.html#change-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="local-scale-effects-of-linear-features" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Local scale effects of linear features<a href="attribution.html#local-scale-effects-of-linear-features" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The local scale linear feature effects show how different types of linear features are predicted to affect habitat suitability for a species where the feature occurs. For each linear feature type, habitat suitability is compared with the suitability predicted for the native vegetation or soil type that was present before the footprint was created. This is the same formula as local scale sector effects, but using linear features instead of broad footprint sectors.</p>
+<p><span class="math display">\[Local\ scale\ linear\ feature\ effect =  \frac{Current_{linear feature} - Reference_{linear feature}}{Reference_{linear feature}} * 100%\]</span></p>
+</div>
+<div id="change-over-time" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Change over time<a href="attribution.html#change-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Our “backfilled” reference layer represents a hypothetical modern landscape where human footprint did not occur. In this sense, it does not represent the landscape prior to colonization, as we do not reconstruct landcover backwards in time. Therefore, in order to assess how the impacts of industrial sectors compare to natural forest dynamics (i.e., wildfires, aging), we attribute regional sector impacts between 2010 and 2021. We summarize landscape transitions into six classes:</p>
 <ol style="list-style-type: decimal">
 <li>Aging of native forest that is undisturbed over that span.</li>
@@ -192,8 +198,8 @@
 </ol>
 <p>These summaries can be interpreted the same as the regional scale effects.</p>
 </div>
-<div id="limitations-2" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Limitations<a href="attribution.html#limitations-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="limitations-2" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Limitations<a href="attribution.html#limitations-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The sector effect results are based on each species’ habitat models applied to the maps of vegetation or soils and footprint in the region, so all the limitations of the modeling and mapping apply to these results. There are also additional caveats for sector effects:</p>
 <ul>
 <li>Where footprint types overlap, such as a well site in a cultivated field, or a road through a forestry cutblock, we assign the sector footprint type as being ‘on top’, and the effect of the footprint is allocated to the overlapping sector.</li>

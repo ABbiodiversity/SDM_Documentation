@@ -29,6 +29,7 @@ limitations-1
 attribution
 local-scale-effects
 regional-scale-effects
+local-scale-effects-of-linear-features
 change-over-time
 limitations-2
 biodiversity-intactness-index
