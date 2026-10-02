@@ -25,6 +25,12 @@ The species most negatively affected by an industrial sector will therefore be s
 <center>
 ![Predicted regional (left) and local (under footprint; right) sector effects. Y-axis is scaled to the maximum of each effect and are assessed in each modeling region. ](SDM_Documentation_files/figure-html/images/sector-forested.jpeg){width=80%}
 
+## Local scale effects of linear features
+
+The local scale linear feature effects show how different types of linear features are predicted to affect habitat suitability for a species where the feature occurs. For each linear feature type, habitat suitability is compared with the suitability predicted for the native vegetation or soil type that was present before the footprint was created. This is the same formula as local scale sector effects, but using linear features instead of broad footprint sectors.
+
+$$Local\ scale\ linear\ feature\ effect =  \frac{Current_{linear feature} - Reference_{linear feature}}{Reference_{linear feature}} * 100%$$
+
 ## Change over time
 
 Our “backfilled” reference layer represents a hypothetical modern landscape where human footprint did not occur. In this sense, it does not represent the landscape prior to colonization, as we do not reconstruct landcover backwards in time. Therefore, in order to assess how the impacts of industrial sectors compare to natural forest dynamics (i.e., wildfires, aging), we attribute regional sector impacts between 2010 and 2021. We summarize landscape transitions into six classes:
